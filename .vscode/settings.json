@@ -1,0 +1,12 @@
+{
+  "npm.packageManager": "yarn",
+  "eslint.enable": true,
+  "eslint.options": {
+    "configFile": "config/.eslintrc.json"
+  },
+  "eslint.packageManager": "yarn",
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  }
+}
