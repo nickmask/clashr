@@ -7,8 +7,6 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   bucket: $AWS_BUCKET
   skip_cleanup: true
-  local_dir: lib/apps/main.ui
-  script:
-    - yarn install
-    - yarn build
+  local_dir: lib/apps/main.ui/build
+script: yarn build
     
