@@ -2,11 +2,11 @@
 
 This section documents the various technologies used in this project.
 
-* [Infrastructure as Code](#iac)
-   * [Terraform](#iac-terraform)
+* [Infrastructure as Code](#infrastructure-as-code)
+   * [Terraform](#terraform)
 
-## <a name="iac"/>Infrastructure as Code
+## Infrastructure as Code
 
-### <a name="iac-terraform"/>Terraform
+### Terraform
 
 [website](https://www.terraform.io/) · [docs](https://www.terraform.io/docs/index.html)
