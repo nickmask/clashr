@@ -8,7 +8,8 @@
   "private": true,
   "workspaces": ["lib/*/*"],
   "scripts": {
-    "bootstrap": "node_modules/.bin/lerna bootstrap --hoist"
+    "bootstrap": "node_modules/.bin/lerna bootstrap --hoist",
+    "test": "node_modules/.bin/lerna run test --since"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
