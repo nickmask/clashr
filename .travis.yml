@@ -11,4 +11,5 @@ deploy:
   script:
     - yarn install
     - yarn build
+    - ls
     
