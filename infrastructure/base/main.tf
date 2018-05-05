@@ -1,11 +1,11 @@
-# terraform {
-#   backend "s3" {
-#     key            = "base/terraform.tfstate"
-#     region         = "ap-southeast-2"
-#     bucket         = "clashr-state-storage"
-#     dynamodb_table = "clashr-state-locker"
-#   }
-# }
+terraform {
+  backend "s3" {
+    key            = "base/terraform.tfstate"
+    region         = "ap-southeast-2"
+    bucket         = "clashr-state-storage"
+    dynamodb_table = "clashr-state-locker"
+  }
+}
 
 provider "aws" {
   region     = "${var.cloud_region}"
