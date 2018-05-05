@@ -1,7 +1,13 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# IAC CONFIG
+# ----------------------------------------------------------------------------------------------------------------------
 terraform {
+  # minimum version for running this blueprint
+  required_version = ">= 0.11.7"
+
+  # remote state backend
   backend "s3" {
     key            = "base/terraform.tfstate"
-    region         = "ap-southeast-2"
     bucket         = "clashr-state-storage"
     dynamodb_table = "clashr-state-locker"
   }
@@ -13,8 +19,23 @@ provider "aws" {
   secret_key = "${var.cloud_secret_key}"
 }
 
+# using this for the AWS Certificate which needs to be in us-east-1
+provider "aws" {
+  alias      = "us-east-1"
+  region     = "us-east-1"
+  access_key = "${var.cloud_access_key}"
+  secret_key = "${var.cloud_secret_key}"
+}
+
 resource "aws_route53_zone" "main" {
   name = "${var.project_domain}"
+}
+
+data "aws_acm_certificate" "main_webapp" {
+  provider    = "aws.us-east-1"
+  domain      = "*.${var.project_domain}"
+  statuses    = ["ISSUED"]
+  most_recent = false
 }
 
 module "webapp" {
@@ -27,7 +48,7 @@ module "webapp" {
 
   hosted_zone_id = "${aws_route53_zone.main.zone_id}"
 
-  acm_certificate_arn = "arn:aws:acm:us-east-1:049552520592:certificate/00577536-d64a-4a7a-8f21-022ddb5d8a58"
+  acm_certificate_arn = "${data.aws_acm_certificate.main_webapp.arn}"
 
   custom_error_response_objects = [
     {
