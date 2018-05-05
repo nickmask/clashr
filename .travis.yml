@@ -8,8 +8,5 @@ deploy:
   bucket: $AWS_BUCKET
   skip_cleanup: true
   local_dir: lib/apps/main.ui
-  script:
-    - yarn install
-    - yarn build
-    - ls
+script: yarn build
     
