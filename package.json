@@ -1,14 +1,13 @@
 {
-  "name": "percy",
+  "name": "clashr",
   "version": "0.0.0",
-  "description": "Percy",
+  "description": "Clashr",
   "main": "index.js",
   "repository": "git@github.com:nickmask/percy.git",
-  "license": "MIT",
+  "license": "Copyright 2018",
   "private": true,
   "workspaces": ["lib/*/*"],
   "scripts": {
-    "bootstrap": "node_modules/.bin/lerna bootstrap --hoist",
     "test": "node_modules/.bin/lerna run test --since",
     "build": "node_modules/.bin/lerna run build --since"
   },
