@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - lts
+  - node
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
