@@ -6,7 +6,7 @@
   "repository": "git@github.com:nickmask/percy.git",
   "license": "MIT",
   "private": true,
-  "workspaces": ["lib/*"],
+  "workspaces": ["lib/apps/*"],
   "scripts": {
     "bootstrap": "node_modules/.bin/lerna bootstrap --hoist"
   },
