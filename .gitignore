@@ -24,5 +24,6 @@ vendor/
 
 *.tfplan
 *.tfstate
+*.tfstate.backup
 *.tfvars
 .terraform/
