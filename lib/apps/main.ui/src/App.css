@@ -5,5 +5,12 @@
   grid-template-columns: 100%;
 }
 
-.App-routes-container {
+.App-routes-main {
+  background: #ffffff;
+}
+
+.App-routes-container,
+.App-routes-container > * {
+  width: 100%;
+  height: 100%;
 }

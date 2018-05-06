@@ -1,3 +1,12 @@
 .AuthRegister-main {
   background-color: #ffffff;
 }
+
+.AuthRegister-input-group {
+  width: 100%;
+  margin: 1.45em 0;
+}
+
+.AuthRegister-input-group > * {
+  width: 100%;
+}

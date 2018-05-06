@@ -1,3 +1,15 @@
 .Auth-main {
   background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Auth-routes-main {
+  width: 40vw;
+  min-width: 300px;
+}
+
+.Auth-routes-container {
+  padding: 4rem;
 }
