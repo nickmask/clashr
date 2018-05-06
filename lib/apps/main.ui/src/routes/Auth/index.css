@@ -8,6 +8,7 @@
 .Auth-routes-main {
   width: 40vw;
   min-width: 300px;
+  max-width: 400px;
 }
 
 .Auth-routes-container {
