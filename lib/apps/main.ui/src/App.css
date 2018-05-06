@@ -1,7 +1,9 @@
 .App-main {
-  text-align: center;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }
 
 .App-routes-container {
-  text-align: center;
 }
